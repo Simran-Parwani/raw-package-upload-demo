@@ -8,9 +8,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Download ZIP from URL
-        run: |
-          curl -L "https://releases.hashicorp.com/vault/1.17.5+ent.hsm/vault_1.17.5+ent.hsm_linux_amd64.zip" -o vault.zip
+      - name: Checkout code
+        uses: actions/checkout@v3
 
       - name: Install Cloudsmith CLI
         run: pip install --upgrade cloudsmith-cli
